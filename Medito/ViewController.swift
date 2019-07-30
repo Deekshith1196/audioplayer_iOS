@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         formatter.allowedUnits = [.minute, .second]
         formatter.unitsStyle = .full
         
-        self.minTimeLbl.text = formatter.string(from: player.currentTime)
+        self.minTimeLbl.text = formatter.string(from: player.currentTime)! 
     }
     
  
