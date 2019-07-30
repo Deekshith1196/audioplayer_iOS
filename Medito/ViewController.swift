@@ -46,8 +46,7 @@ class ViewController: UIViewController {
          coverImg.layer.shadowRadius = 20
          coverImg.layer.masksToBounds = false
          coverImg.layer.cornerRadius = 15
-        
-       
+        self.timeSlider.setThumbImage(UIImage(named: "slider-circle.png")!, for: .normal)
         
         var Time = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimeSlider), userInfo: nil, repeats: true)
         
@@ -77,8 +76,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.hour, .minute, .second]
-        formatter.unitsStyle = .positional
+        formatter.allowedUnits = [.minute, .second]
+        formatter.unitsStyle = .full
         
         self.minTimeLbl.text = formatter.string(from: player.currentTime)
     }
