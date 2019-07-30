@@ -14,6 +14,9 @@
 		EC097EE722EEEAA2007D1B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC097EE522EEEAA2007D1B9B /* LaunchScreen.storyboard */; };
 		EC097EF222EEEAA3007D1B9B /* MeditoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC097EF122EEEAA3007D1B9B /* MeditoTests.swift */; };
 		EC097EFD22EEEAA3007D1B9B /* MeditoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC097EFC22EEEAA3007D1B9B /* MeditoUITests.swift */; };
+		EC097F0C22EEF129007D1B9B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC097F0B22EEF129007D1B9B /* AVFoundation.framework */; };
+		EC097F0E22EEF445007D1B9B /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC097F0D22EEF445007D1B9B /* song.mp3 */; };
+		EC097F1022EF0F66007D1B9B /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC097F0F22EF0F66007D1B9B /* player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		EC097EF822EEEAA3007D1B9B /* MeditoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeditoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC097EFC22EEEAA3007D1B9B /* MeditoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditoUITests.swift; sourceTree = "<group>"; };
 		EC097EFE22EEEAA3007D1B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC097F0B22EEF129007D1B9B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EC097F0D22EEF445007D1B9B /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+		EC097F0F22EF0F66007D1B9B /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC097F0C22EEF129007D1B9B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 				EC097EF022EEEAA3007D1B9B /* MeditoTests */,
 				EC097EFB22EEEAA3007D1B9B /* MeditoUITests */,
 				EC097EDA22EEEAA0007D1B9B /* Products */,
+				EC097F0A22EEF128007D1B9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +107,9 @@
 			children = (
 				EC097EDC22EEEAA0007D1B9B /* AppDelegate.swift */,
 				EC097EDE22EEEAA0007D1B9B /* ViewController.swift */,
+				EC097F0F22EF0F66007D1B9B /* player.swift */,
 				EC097EE022EEEAA0007D1B9B /* Main.storyboard */,
+				EC097F0D22EEF445007D1B9B /* song.mp3 */,
 				EC097EE322EEEAA2007D1B9B /* Assets.xcassets */,
 				EC097EE522EEEAA2007D1B9B /* LaunchScreen.storyboard */,
 				EC097EE822EEEAA2007D1B9B /* Info.plist */,
@@ -123,6 +133,14 @@
 				EC097EFE22EEEAA3007D1B9B /* Info.plist */,
 			);
 			path = MeditoUITests;
+			sourceTree = "<group>";
+		};
+		EC097F0A22EEF128007D1B9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC097F0B22EEF129007D1B9B /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +211,11 @@
 				TargetAttributes = {
 					EC097ED822EEEAA0007D1B9B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					EC097EEC22EEEAA3007D1B9B = {
 						CreatedOnToolsVersion = 10.1;
@@ -230,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC097EE722EEEAA2007D1B9B /* LaunchScreen.storyboard in Resources */,
+				EC097F0E22EEF445007D1B9B /* song.mp3 in Resources */,
 				EC097EE422EEEAA2007D1B9B /* Assets.xcassets in Resources */,
 				EC097EE222EEEAA0007D1B9B /* Main.storyboard in Resources */,
 			);
@@ -257,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC097EDF22EEEAA0007D1B9B /* ViewController.swift in Sources */,
+				EC097F1022EF0F66007D1B9B /* player.swift in Sources */,
 				EC097EDD22EEEAA0007D1B9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
